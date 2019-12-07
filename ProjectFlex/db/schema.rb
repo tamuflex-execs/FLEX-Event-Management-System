@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_10_15_171103) do
     t.string "user_name"
     t.string "user_zone"
     t.integer "event_id"
-    t.string "status"
+    t.string "status", default: "unapproved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_10_15_171103) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "date"
-    t.integer "point_value"
+    t.integer "point_value", default: 1
     t.string "point_type"
     t.string "location"
     t.string "details", default: ""
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 2019_10_15_171103) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "user_zone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "permissions", default: "Member"
     t.string "net_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
