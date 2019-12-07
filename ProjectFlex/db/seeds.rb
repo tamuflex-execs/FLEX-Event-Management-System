@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user_list = [
 
-    { :name => "Grant", :permissions => "Member", :net_id => "hillwest36", :user_zone => "LD" },
+    { :name => "Grant", :permissions => "Exec", :net_id => "hillwest36", :user_zone => "LD" },
     { :name => "Emily", :permissions => "Exec", :net_id => "emily.123", :user_zone => "LD"  },
     { :name => "Kelsey", :permissions => "Exec", :net_id => "kelsey.123", :user_zone => "LD"  },
     { :name => "Monty", :permissions => "Exec", :net_id => "monty.123", :user_zone => "FR"  },
@@ -22,7 +22,7 @@ user_list = [
     { :name => "Gia", :permissions => "Member", :net_id => "gia.123", :user_zone => "Service"  },
     { :name => "Colton", :permissions => "Exec", :net_id => "coltmo", :user_zone => "Service"  },
     { :name => "Joseph", :permissions => "Exec", :net_id => "joseph20santana", :user_zone => "Service"  },
-    { :name => "Brett", :permissions => "Exec", :net_id => "brett.martin", :user_zone => "Service"  },
+    { :name => "Brett", :permissions => "Member", :net_id => "brett.martin", :user_zone => "Service"  },
     { :name => "Josh", :permissions => "Exec", :net_id => "jdmcafee24", :user_zone => "Social"  },
     { :name => "Nathan", :permissions => "ZL", :net_id => "a.123", :user_zone => "LD"  },
     { :name => "Meagan", :permissions => "ZL", :net_id => "b.123", :user_zone => "LD"  },
