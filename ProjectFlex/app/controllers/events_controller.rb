@@ -35,7 +35,7 @@ class EventsController < ApplicationController
     end
     
     def destroy
-        Event.get_event(params[:id]).destroy
+        Event.destroy_event(params[:id])
         redirect_to("/calendar")
     end
     
@@ -68,6 +68,9 @@ class EventsController < ApplicationController
         end
         
         @maxSignups = Event.get_max_signups(id)
+        if @maxSignups == 0
+            @maxSignups = 1000
+        end
         @currSignups = Event.get_current_signups(id)
         @spotsOpen = true
         if @currSignups == @maxSignups

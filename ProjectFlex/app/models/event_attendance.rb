@@ -4,6 +4,10 @@ class EventAttendance < ApplicationRecord
         EventAttendance.where(user_id: username, event_id: event).destroy_all   
     end
     
+    def self.destroy_for_event(event)
+        EventAttendance.where(event_id: event).destroy_all    
+    end
+    
     def self.find_registered_events(username, status)
         EventAttendance.where(user_id: username, status: status)
     end

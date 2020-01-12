@@ -36,4 +36,10 @@ class Event < ApplicationRecord
     def self.wipe()
         Event.destroy_all    
     end
+    
+    def self.destroy_event(e_id)
+        event = Event.find_by(id: e_id)
+        event.destroy
+        EventAttendance.destroy_for_event(e_id)
+    end
 end
